@@ -207,4 +207,227 @@ Use case: Strong typing for props helps prevent bugs during component integratio
 
 ---
 
-Ready for the challenge pack next? 🔥
+### **Lesson 11: Utility Types (Enhancing Flexibility and Safety)**
+
+```ts
+interface UserProfile {
+  id: number;
+  name: string;
+  email: string;
+}
+
+// Partial: make all properties optional
+const updateProfile = (updates: Partial<UserProfile>) => {
+  // you can send only what you want to update
+};
+
+// Readonly: properties cannot be changed
+const user: Readonly<UserProfile> = {
+  id: 1,
+  name: "Sai",
+  email: "sai@example.com"
+};
+```
+
+---
+
+### **Lesson 12: Type Guards & Custom Guards**
+
+```ts
+function isString(value: unknown): value is string {
+  return typeof value === "string";
+}
+
+function printValue(val: unknown) {
+  if (isString(val)) {
+    console.log(val.toUpperCase());
+  }
+}
+```
+
+---
+
+### **Lesson 13: Advanced Type Manipulation**
+
+```ts
+type ApiResponse<T> = T extends string ? string : T[];
+
+const handleResponse = <T>(data: T): ApiResponse<T> => {
+  if (typeof data === "string") return data;
+  return [data] as T[];
+};
+```
+
+---
+
+### **Lesson 14: Declaration Merging**
+
+Useful for extending global interfaces or third-party modules:
+
+```ts
+declare global {
+  interface Window {
+    appVersion: string;
+  }
+}
+
+window.appVersion = "1.0.0";
+```
+
+---
+
+### **Lesson 15: Type Declarations & Modules**
+
+```ts
+// types/logger.d.ts
+export interface Logger {
+  log: (msg: string) => void;
+  error: (msg: string) => void;
+}
+
+// modules/logger.ts
+import type { Logger } from "./types/logger";
+
+const consoleLogger: Logger = {
+  log: (msg) => console.log(msg),
+  error: (msg) => console.error(msg),
+};
+```
+
+---
+
+### **Lesson 16: Template Literal Types**
+
+```ts
+type EventType = "click" | "hover";
+type HandlerName = `on${Capitalize<EventType>}`; // "onClick" | "onHover"
+```
+
+---
+
+### **Lesson 17: keyof & Lookup Types**
+
+```ts
+interface Config {
+  retries: number;
+  timeout: number;
+}
+
+type ConfigKeys = keyof Config; // "retries" | "timeout"
+```
+
+---
+
+### **Lesson 18: typeof & Indexed Access Types**
+
+```ts
+const defaults = {
+  theme: "dark",
+  version: 1.0
+};
+
+type Defaults = typeof defaults; // inferred
+```
+
+---
+
+### **Lesson 19: Conditional Types**
+
+```ts
+type Result<T> = T extends string ? "string" : "non-string";
+```
+
+---
+
+### **Lesson 20: Infer Keyword**
+
+```ts
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never;
+```
+
+---
+
+### **Lesson 21: Discriminated Unions (Tagged Unions for State Machines)**
+
+```ts
+type LoadingState = { status: "loading" };
+type ErrorState = { status: "error"; message: string };
+type SuccessState = { status: "success"; data: any };
+
+type FetchState = LoadingState | ErrorState | SuccessState;
+
+function handleFetch(state: FetchState) {
+  if (state.status === "loading") return "Loading...";
+  if (state.status === "error") return `Error: ${state.message}`;
+  return `Data: ${JSON.stringify(state.data)}`;
+}
+```
+
+---
+
+### **Lesson 22: Exhaustive Checks with Never**
+
+```ts
+function assertNever(value: never): never {
+  throw new Error(`Unhandled case: ${value}`);
+}
+
+function handleStatus(status: "idle" | "loading" | "success") {
+  switch (status) {
+    case "idle": return "Idle";
+    case "loading": return "Loading";
+    case "success": return "Done";
+    default: return assertNever(status); // TS error if a case is missing
+  }
+}
+```
+
+---
+
+### **Lesson 23: Intersection Types**
+
+```ts
+interface Person {
+  name: string;
+}
+
+interface Employee {
+  id: number;
+}
+
+type Staff = Person & Employee;
+
+const sai: Staff = { name: "Sai", id: 1001 };
+```
+
+---
+
+### **Lesson 24: Function Overloads**
+
+```ts
+function format(input: string): string;
+function format(input: number): string;
+function format(input: string | number): string {
+  return `Formatted: ${input}`;
+}
+```
+
+---
+
+### **Lesson 25: Assertion Functions**
+
+```ts
+function assertIsNumber(val: unknown): asserts val is number {
+  if (typeof val !== "number") {
+    throw new Error("Not a number");
+  }
+}
+
+function calculate(val: unknown) {
+  assertIsNumber(val);
+  return val * 2; // TS knows val is number here
+}
+```
+
+---
+
