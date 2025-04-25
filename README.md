@@ -1,3 +1,121 @@
+# TypeScript Learning Curriculum
+
+A comprehensive, structured curriculum for mastering TypeScript from basics to advanced concepts.
+
+## Table of Contents
+
+### Foundation
+- [Basic Types & Type Annotations](./01-basic-types.md)
+- [Variables & Declarations](./02-variables-declarations.md)
+- [Functions & Function Types](./03-functions.md)
+- [Object Types & Interfaces](./04-objects-interfaces.md)
+- [Arrays & Tuples](./05-arrays-tuples.md)
+- [Enums](./06-enums.md)
+- [Type Assertions](./07-type-assertions.md)
+
+### Intermediate Concepts
+- [Classes & OOP](./08-classes-oop.md)
+- [Generics](./09-generics.md)
+- [Union & Intersection Types](./10-union-intersection-types.md)
+- [Type Guards & Type Narrowing](./11-type-guards-narrowing.md)
+- [Discriminated Unions](./12-discriminated-unions.md)
+- [Utility Types](./13-utility-types.md)
+- [Type Aliases](./14-type-aliases.md)
+- [Literal Types](./15-literal-types.md)
+
+### Advanced Type System
+- [Conditional Types](./16-conditional-types.md)
+- [Mapped Types](./17-mapped-types.md)
+- [Template Literal Types](./18-template-literal-types.md)
+- [Index Types & keyof](./19-index-types-keyof.md)
+- [Type Inference](./20-type-inference.md)
+- [Type Compatibility](./21-type-compatibility.md)
+- [Variance](./22-variance.md)
+- [Decorators](./23-decorators.md)
+
+### Modern TypeScript Features
+- [satisfies Operator](./24-satisfies-operator.md)
+- [const Type Parameters](./25-const-type-parameters.md)
+- [Type Narrowing with in](./26-type-narrowing-in.md)
+- [Template String Pattern Index Signatures](./27-template-string-patterns.md)
+- [Type Predicates](./28-type-predicates.md)
+- [Assertion Functions](./29-assertion-functions.md)
+
+### Practical Applications
+- [TypeScript with React](./30-typescript-react.md)
+- [State Management](./31-state-management.md)
+- [API Integration](./32-api-integration.md)
+- [Error Handling](./33-error-handling.md)
+- [Module Systems](./34-module-systems.md)
+- [Declaration Files](./35-declaration-files.md)
+- [Configuration](./36-tsconfig.md)
+
+### Best Practices
+- [SOLID Principles](./37-solid-principles.md)
+- [Type-Safe Error Handling](./38-type-safe-error-handling.md)
+- [Immutability](./39-immutability.md)
+- [Testing with TypeScript](./40-testing.md)
+- [Performance Optimization](./41-performance.md)
+- [Code Organization](./42-code-organization.md)
+- [ESLint & Prettier Setup](./43-eslint-prettier.md)
+
+### Advanced Patterns
+- [Factory Pattern](./44-factory-pattern.md)
+- [Builder Pattern](./45-builder-pattern.md)
+- [Dependency Injection](./46-dependency-injection.md)
+- [Monads & Functional Programming](./47-monads-fp.md)
+- [Type-Safe Event Emitters](./48-type-safe-events.md)
+- [Generic Constraints](./49-generic-constraints.md)
+- [Higher-Order Types](./50-higher-order-types.md)
+
+### Tooling & Ecosystem
+- [TypeScript Compiler](./51-typescript-compiler.md)
+- [Build Tools](./52-build-tools.md)
+- [Debug Tools](./53-debug-tools.md)
+- [VS Code Integration](./54-vscode-integration.md)
+- [Type Definition Management](./55-type-definition-management.md)
+- [Migration Strategies](./56-migration-strategies.md)
+
+## Learning Path
+
+1. Start with the Foundation section
+2. Move through Intermediate Concepts
+3. Explore Advanced Type System features
+4. Learn Modern TypeScript Features
+5. Apply knowledge in Practical Applications
+6. Study and implement Best Practices
+7. Master Advanced Patterns
+8. Understand Tooling & Ecosystem
+
+## Key Resources
+
+- [Official TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
+- [TypeScript Weekly Newsletter](https://typescript-weekly.com/)
+- [DefinitelyTyped Repository](https://github.com/DefinitelyTyped/DefinitelyTyped)
+- [TypeScript GitHub Repository](https://github.com/microsoft/TypeScript)
+
+## How to Use This Curriculum
+
+1. Follow the sections in order
+2. Complete exercises in each module
+3. Build the suggested mini-projects
+4. Review recap questions
+5. Practice with real-world examples
+6. Contribute to open source TypeScript projects
+
+## Prerequisites
+
+- Basic JavaScript knowledge
+- Understanding of programming fundamentals
+- Code editor (VS Code recommended)
+- Node.js installed
+- TypeScript installed (`npm install -g typescript`)
+
+## Getting Started
+
+Begin with [Basic Types & Type Annotations](./01-basic-types.md) and follow the navigation links at the bottom of each page to progress through the curriculum.
+
 ## 🚀 TypeScript Lessons for Real-World Software Development
 
 ### **Lesson 1: Variables & Types (in a Backend API Service)**
